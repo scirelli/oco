@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+        <style>
+            .col-sm-6, .col-sm-3{
+                padding-left:5px;
+                padding-right:5px;
+            }
+            #middle{
+                margin:0;
+            }
+            .panel{
+                margin-bottom:10px;
+            }
+        </style>
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+		<!-- WRAPPER -->
+		<div id="wrapper">
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+				<div id="content" class="padding-20">
+					<div class="row">
+						<div class="col-sm-6 panel-large">
+							<!-- Chart 1 -->
+							<div id="panel-chartjs-1" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>Map</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+                                    <!--<canvas class="chartjs fullwidth height-300" id="lineChartCanvas" width="547" height="300"></canvas>-->
+                                    <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/YoY-Change-2015-to-2016?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'((Forecast:%20%3E0%20)%20AND%20ForecastY:%202016)')),uiState:(),vis:(aggs:!((id:'1',params:(field:YearChange),schema:metric,type:sum),(id:'2',params:(autoPrecision:!t,field:location,precision:2),schema:segment,type:geohash_grid)),listeners:(),params:(addTooltip:!t,heatBlur:'25',heatMaxZoom:'1',heatMinOpacity:'0.57',heatNormalizeData:!t,heatRadius:'11',isDesaturated:!f,mapType:'Shaded%20Geohash%20Grid',wms:(enabled:!f,options:(attribution:'Maps%20provided%20by%20USGS',format:image%2Fpng,layers:'0',styles:'',transparent:!t,version:'1.3.0'),url:'https:%2F%2Fbasemap.nationalmap.gov%2Farcgis%2Fservices%2FUSGSTopo%2FMapServer%2FWMSServer')),title:'YoY%20Change%202015%20to%202016',type:tile_map))" height="600" width="800"></iframe>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-0').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-0" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs fullwidth height-300" id="lineChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var lineChartCanvas = {
+		labels:["January","February","March","April","May","June","July"],
+		datasets:[
+			{
+				label: "My First dataset",
+				fillColor : "rgba(220,220,220,0.2)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,220,220,1)",
+				data : [65,59,90,81,56,55,40]
+			},
+			{
+				label: "My Second dataset",
+				fillColor : "rgba(151,187,205,0.2)",
+				strokeColor : "rgba(151,187,205,1)",
+				pointColor : "rgba(151,187,205,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(151,187,205,1)",
+				data : [28,48,40,19,96,27,100]
+			}
+		]
+	};
+
+	var ctx = document.getElementById("lineChartCanvas").getContext("2d");
+	new Chart(ctx).Line(lineChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+								</div>
+								<!-- /panel footer -->
+							</div>
+							<!-- /Chart 1 -->
+						</div>
+
+						<div class="col-sm-3 panel-small">
+							<!-- Chart 2 -->
+							<div id="panel-chartjs-2" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>Trending ISIL Content</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+									<canvas class="chartjs fullwidth height-300" id="barChartCanvas" width="547" height="300"></canvas>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-1').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-1" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs fullwidth height-300" id="barChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var barChartCanvas = {
+		labels:["January","February","March","April","May","June","July"],
+		datasets:[
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : [65,59,90,81,56,55,50]
+			}
+		]
+	};
+
+	var ctx = document.getElementById("barChartCanvas").getContext("2d");
+	new Chart(ctx).Bar(barChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+
+						<div class="col-sm-3 panel-small">
+							<!-- Chart 2 -->
+							<div id="panel-chartjs-3" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>Glimps Forcast Change</strong>
+									</span>
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body text-center">
+									<canvas class="chartjs height-300" id="polarAreaChartCanvas" width="547" height="300"></canvas>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-2').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-2" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs height-300" id="polarAreaChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var polarAreaChartCanvas = [
+		{
+			value : 62,
+			color: "#D97041"
+		},
+		{
+			value : 70,
+			color: "#C7604C"
+		},
+		{
+			value : 41,
+			color: "#21323D"
+		},
+		{
+			value : 24,
+			color: "#9D9B7F"
+		},
+		{
+			value : 55,
+			color: "#7D4F6D"
+		},
+		{
+			value : 18,
+			color: "#584A5E"
+		}
+	];
+
+	var ctx = document.getElementById("polarAreaChartCanvas").getContext("2d");
+	new Chart(ctx).PolarArea(polarAreaChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+
+						<div class="col-sm-3 panel-small">
+							<!-- Chart 2 -->
+							<div id="panel-chartjs-4" class="panel panel-default">
+
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>CT/COIN COP</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body text-center">
+									<canvas class="chartjs height-300" id="pieChartCanvas" width="547" height="300"></canvas>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-3').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-3" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs height-300" id="pieChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var pieChartCanvas = [
+		{
+			value: 30,
+			color:"#F38630"
+		},
+		{
+			value : 50,
+			color : "#E0E4CC"
+		},
+		{
+			value : 100,
+			color : "#69D2E7"
+		},
+		{
+			value : 45,
+			color : "#1E73BE"
+		}
+	];
+
+	var ctx = document.getElementById("pieChartCanvas").getContext("2d");
+	new Chart(ctx).Pie(pieChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+
+						<div class="col-sm-3 panel-small">
+							<!-- Chart 2 -->
+							<div id="panel-chartjs-5" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>Provincial Instability</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body text-center">
+									<canvas class="chartjs height-300" id="doughnutChartCanvas" width="547" height="300"></canvas>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-4').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-4" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs height-300" id="doughnutChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS [after scripts.js] --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var doughnutChartCanvas = [
+		{
+			value: 30,
+			color:"#F7464A"
+		},
+		{
+			value : 50,
+			color : "#46BFBD"
+		},
+		{
+			value : 100,
+			color : "#FDB45C"
+		},
+		{
+			value : 40,
+			color : "#949FB1"
+		},
+		{
+			value : 120,
+			color : "#4D5360"
+		}
+	];
+
+	var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
+	new Chart(ctx).Doughnut(doughnutChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+
+						<div class="col-sm-6 panel-small">
+							<!-- Chart 2 -->
+							<div id="panel-chartjs-6" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>GEOInt Alerts</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body text-center">
+									<canvas class="chartjs height-300" id="radarChartCanvas" width="547" height="300"></canvas>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-5').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-5" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs height-300" id="radarChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var radarChartCanvas = {
+		labels:["A","B","C","D","E","F","G"],
+		datasets:[
+			{
+				label: "My First dataset",
+				fillColor: "rgba(220,220,220,0.2)",
+				strokeColor: "rgba(220,220,220,1)",
+				pointColor: "rgba(220,220,220,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(220,220,220,1)",
+				data: [65,59,90,81,56,55,40]
+			},
+			{
+				label: "My Second dataset",
+				fillColor: "rgba(151,187,205,0.2)",
+				strokeColor: "rgba(151,187,205,1)",
+				pointColor: "rgba(151,187,205,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(151,187,205,1)",
+				data: [28,48,40,19,96,27,100]
+			}
+		]
+	};
+
+	var ctx = document.getElementById("radarChartCanvas").getContext("2d");
+	new Chart(ctx).Radar(radarChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+
+						<div class="col-sm-3 panel-small">
+							<!-- Chart 2 -->
+							<div id="panel-chartjs-5" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>Most Retweet ISIL</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body text-center">
+									<canvas class="chartjs height-300" id="radarChartCanvas" width="547" height="300"></canvas>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-5').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-5" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs height-300" id="radarChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var radarChartCanvas = {
+		labels:["A","B","C","D","E","F","G"],
+		datasets:[
+			{
+				label: "My First dataset",
+				fillColor: "rgba(220,220,220,0.2)",
+				strokeColor: "rgba(220,220,220,1)",
+				pointColor: "rgba(220,220,220,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(220,220,220,1)",
+				data: [65,59,90,81,56,55,40]
+			},
+			{
+				label: "My Second dataset",
+				fillColor: "rgba(151,187,205,0.2)",
+				strokeColor: "rgba(151,187,205,1)",
+				pointColor: "rgba(151,187,205,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(151,187,205,1)",
+				data: [28,48,40,19,96,27,100]
+			}
+		]
+	};
+
+	var ctx = document.getElementById("radarChartCanvas").getContext("2d");
+	new Chart(ctx).Radar(radarChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+
+						<div class="col-sm-3 panel-small">
+							<!-- Chart 2 -->
+							<div id="panel-chartjs-6" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>Uthercast</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body text-center">
+									<canvas class="chartjs height-300" id="radarChartCanvas" width="547" height="300"></canvas>
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-5').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-5" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;canvas class="chartjs height-300" id="radarChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+
+
+<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
+loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+	var radarChartCanvas = {
+		labels:["A","B","C","D","E","F","G"],
+		datasets:[
+			{
+				label: "My First dataset",
+				fillColor: "rgba(220,220,220,0.2)",
+				strokeColor: "rgba(220,220,220,1)",
+				pointColor: "rgba(220,220,220,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(220,220,220,1)",
+				data: [65,59,90,81,56,55,40]
+			},
+			{
+				label: "My Second dataset",
+				fillColor: "rgba(151,187,205,0.2)",
+				strokeColor: "rgba(151,187,205,1)",
+				pointColor: "rgba(151,187,205,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(151,187,205,1)",
+				data: [28,48,40,19,96,27,100]
+			}
+		]
+	};
+
+	var ctx = document.getElementById("radarChartCanvas").getContext("2d");
+	new Chart(ctx).Radar(radarChartCanvas);
+});
+</pre>
+<!-- /pre code -->
+
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+		</div>
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">
+			/**
+				Chart.js
+				http://www.chartjs.org/
+			**/
+			loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+
+				var lineChartCanvas = {
+					labels : ["January","February","March","April","May","June","July"],
+					datasets : [
+						{
+							label: "My First dataset",
+							fillColor : "rgba(220,220,220,0.2)",
+							strokeColor : "rgba(220,220,220,1)",
+							pointColor : "rgba(220,220,220,1)",
+							pointStrokeColor : "#fff",
+							pointHighlightFill : "#fff",
+							pointHighlightStroke : "rgba(220,220,220,1)",
+							data : [65,59,90,81,56,55,40]
+						},
+						{
+							label: "My Second dataset",
+							fillColor : "rgba(151,187,205,0.2)",
+							strokeColor : "rgba(151,187,205,1)",
+							pointColor : "rgba(151,187,205,1)",
+							pointStrokeColor : "#fff",
+							pointHighlightFill : "#fff",
+							pointHighlightStroke : "rgba(151,187,205,1)",
+							data : [28,48,40,19,96,27,100]
+						}
+					]
+				};
+
+				var barChartCanvas = {
+					labels : ["January","February","March","April","May","June","July"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,0.8)",
+							highlightFill: "rgba(220,220,220,0.75)",
+							highlightStroke: "rgba(220,220,220,1)",
+							data : [65,59,90,81,56,55,50]
+						}
+					]
+				};
+
+				var radarChartCanvas = {
+					labels : ["A","B","C","D","E","F","G"],
+					datasets: [
+						{
+							label: "My First dataset",
+							fillColor: "rgba(220,220,220,0.2)",
+							strokeColor: "rgba(220,220,220,1)",
+							pointColor: "rgba(220,220,220,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(220,220,220,1)",
+							data: [65,59,90,81,56,55,40]
+						},
+						{
+							label: "My Second dataset",
+							fillColor: "rgba(151,187,205,0.2)",
+							strokeColor: "rgba(151,187,205,1)",
+							pointColor: "rgba(151,187,205,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(151,187,205,1)",
+							data: [28,48,40,19,96,27,100]
+						}
+					]
+				};
+
+				var pieChartCanvas = [
+					{
+						value: 30,
+						color:"#F38630"
+					},
+					{
+						value : 50,
+						color : "#E0E4CC"
+					},
+					{
+						value : 100,
+						color : "#69D2E7"
+					},
+					{
+						value : 45,
+						color : "#1E73BE"
+					}
+				];
+
+				var polarAreaChartCanvas = [
+					{
+						value : 62,
+						color: "#D97041"
+					},
+					{
+						value : 70,
+						color: "#C7604C"
+					},
+					{
+						value : 41,
+						color: "#21323D"
+					},
+					{
+						value : 24,
+						color: "#9D9B7F"
+					},
+					{
+						value : 55,
+						color: "#7D4F6D"
+					},
+					{
+						value : 18,
+						color: "#584A5E"
+					}
+				];
+
+				var doughnutChartCanvas = [
+					{
+						value: 30,
+						color:"#F7464A"
+					},
+					{
+						value : 50,
+						color : "#46BFBD"
+					},
+					{
+						value : 100,
+						color : "#FDB45C"
+					},
+					{
+						value : 40,
+						color : "#949FB1"
+					},
+					{
+						value : 120,
+						color : "#4D5360"
+					}
+				];
+
+
+				// lineChartCanvas
+				//var ctx = document.getElementById("lineChartCanvas").getContext("2d");
+				//new Chart(ctx).Line(lineChartCanvas);
+
+				// barChartCanvas
+				var ctx = document.getElementById("barChartCanvas").getContext("2d");
+				new Chart(ctx).Bar(barChartCanvas);
+
+				// radarChartCanvas
+				var ctx = document.getElementById("radarChartCanvas").getContext("2d");
+				new Chart(ctx).Radar(radarChartCanvas);
+
+				// polarAreaChartCanvas
+				var ctx = document.getElementById("polarAreaChartCanvas").getContext("2d");
+				new Chart(ctx).PolarArea(polarAreaChartCanvas);
+
+				// pieChartCanvas
+				var ctx = document.getElementById("pieChartCanvas").getContext("2d");
+				new Chart(ctx).Pie(pieChartCanvas);
+
+				// doughnutChartCanvas
+				var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
+				new Chart(ctx).Doughnut(doughnutChartCanvas);
+
+			});
+
+            //id="panel-chartjs-1"
+            var bigChart = $('#panel-chartjs-1'),
+                bigHead  = $('.panel-heading', bigChart),
+                bigHeadPadding  = parseInt(bigHead.css('padding-top')) + parseInt(bigHead.css('padding-bottom')),
+                bigContent = $('.panel-body', bigChart),
+                bigContentPadding = parseInt(bigContent.css('padding-top')) + parseInt(bigContent.css('padding-bottom')),
+                bigFoot  = $('.panel-footer', bigChart),
+                bigFootPadding  = parseInt(bigFoot.css('padding-top')) + parseInt(bigFoot.css('padding-bottom')),
+                $window     = $(window),
+                contentPadding = parseInt($('#content').css('padding-top')),
+                bigContentHeight = $window.height() - bigHead.height() - bigHeadPadding - bigFoot.height() - bigFootPadding - contentPadding - bigContentPadding;
+
+            bigContent.height(bigContentHeight);
+
+            $('.panel-small').each(function(){
+                var me = $(this),
+                    myMargin = parseInt(me.css('margin-bottom')),
+                    myBody = $('.panel-body', me),
+                    myHead = $('.panel-heading', me),
+                    myFeet = $('.panel-footer', me),
+                    myBodyPadding = parseInt(myBody.css('padding-top')) + parseInt(myBody.css('padding-bottom')),
+                    myFeetPadding = parseInt(myFeet.css('padding-top')) + parseInt(myFeet.css('padding-bottom')),
+                    myHeadPadding = parseInt(myHead.css('padding-top')) + parseInt(myHead.css('padding-bottom')); 
+                
+                myBody.height(($window.height()/2 + 4) - myBodyPadding - myFeetPadding - myHeadPadding - myMargin - contentPadding - myHead.height() - myFeet.height()); 
+            });
+		</script>
+	</body>
+</html>
