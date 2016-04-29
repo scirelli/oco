@@ -1,0 +1,14 @@
+.col-sm-6, .col-sm-3{
+    padding-left:5px;
+    padding-right:5px;
+}
+#middle{
+    margin:0;
+}
+.panel{
+    margin-bottom:10px;
+}
+
+#content{
+    padding-bottom:0px !important;
+}
