@@ -34,4 +34,22 @@ $(document).ready(function(){
                   .width(body.width());
         });
     });
+
+    $('#middle div.panel ul.options>li>a.panel_fullscreen').bind("click", function(e) {
+        e.preventDefault();
+        var panel = $(this).closest('div.panel'),
+            panelHead = $('.panel-heading', panel),
+            panelBody = $('.panel-body', panel),
+            iframe = $('iframe', panelBody);
+
+
+        if(panel.hasClass('fullscreen')) {
+            panelBody[0].oldHeight = panelBody.height(); 
+            panelBody.css('height', '100%');
+        } else {
+            panelBody.height(panelBody[0].oldHeight);
+        }
+
+        iframe.height(panelBody.height()-panelHead.height() - parseInt(panelHead.css('padding'))*2).width(panelBody.width())
+    });
 });

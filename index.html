@@ -22,18 +22,27 @@
 
 		<link href="css/commander-dashbaord.css" rel="stylesheet" type="text/css"/>
 	</head>
-
+<!--
+Expand to hole page does not work.
+Add info icon instead of close icon.
+    Info icon that flips the panel-body.
+Remove _ small icon.
+Nav bar up top with time selector and leidos icon.
+    Nav bar has search box.
+Reorder panels.
+Shrink height of alerts table to fit just the three rows.
+-->
 	<body>
 		<div id="wrapper">
 			<section id="middle">
 				<div id="content" class="padding-10">
 					<div class="row">
-                        <!-- Advanced GEOInt Framework (AGF) -->
-						<div class="col-sm-6 panel-large">
-							<div id="panel-chartjs-1" class="panel panel-default">
+                        <!-- GEOInt Alerts -->
+						<div class="col-sm-6 panel-small">
+							<div id="panel-chartjs-6" class="panel panel-default">
 								<div class="panel-heading">
 									<span class="elipsis"><!-- panel title -->
-										<strong>Advanced GEOInt Framework (AGF)</strong>
+										<strong>GEOInt Alerts</strong>
 									</span>
 
 									<!-- right options -->
@@ -46,7 +55,8 @@
 								</div>
 
 								<!-- panel content -->
-								<div class="panel-body">
+								<div class="panel-body text-center">
+                                    <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/3-day-Alert-Table?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(customLabel:'Daily%20Provincial%20Instability%20Score',field:provincial_instability_value),schema:metric,type:max),(id:'3',params:(customLabel:'Alert%20Date',field:date_time,order:desc,orderAgg:(id:'3-orderAgg',params:(field:date_time),schema:orderAgg,type:max),orderBy:custom,size:3),schema:bucket,type:terms),(id:'2',params:(customLabel:'Province%2FState%20Name',field:province,order:desc,orderBy:'1',size:3),schema:bucket,type:terms),(id:'4',params:(customLabel:'Country%20Name',field:country,order:desc,orderBy:'1',size:1),schema:bucket,type:terms)),listeners:(),params:(perPage:3,showMeticsAtAllLevels:!f,showPartialRows:!f),title:'3-day%20Alert%20Table',type:table))"></iframe>
 								</div>
 								<!-- /panel content -->
 
@@ -87,13 +97,13 @@
 							</div>
 						</div>
 
-                        <!-- CT/COIN COP -->
+                        <!-- Provincial Instability Over Time -->
 						<div class="col-sm-3 panel-small">
 							<div id="panel-chartjs-4" class="panel panel-default">
 
 								<div class="panel-heading">
 									<span class="elipsis"><!-- panel title -->
-										<strong>CT/COIN COP</strong>
+										<strong>Provincial Instability Over Time</strong>
 									</span>
 
 									<!-- right options -->
@@ -107,6 +117,37 @@
 
 								<!-- panel content -->
 								<div class="panel-body text-center">
+                                    <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/Provincial-Instability-Over-Time?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'(_type:province%20OR%20_type:actor_cc)%20NOT%20ActionGeo_ADM1Code:%20US*')),uiState:(),vis:(aggs:!((id:'1',params:(field:provincial_instability_value),schema:metric,type:max),(id:'3',params:(field:province,order:desc,orderBy:'1',size:10),schema:group,type:terms),(id:'2',params:(customInterval:'2h',extended_bounds:(),field:date_time,interval:auto,min_doc_count:1),schema:segment,type:date_histogram)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,drawLinesBetweenPoints:!t,interpolate:linear,radiusRatio:9,scale:linear,setYExtents:!f,shareYAxis:!t,showCircles:!t,smoothLines:!t,times:!(),yAxis:()),title:'Provincial%20Instability%20Over%20Time',type:line))"></iframe>
+                                    <!--<iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/VEO-slash-TOC-Common-Operational-Picture?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'(((Actor2Type1Code:INS%20OR%20Actor2Type1Code:IMG%20OR%20Actor2Type1Code:SEP%20OR%20Actor2Type1Code:REB)%20AND%20(EventRootCode:05%20OR%20EventRootCode:06%20OR%20EventRootCode:07))%20OR%20((Actor1Type1Code:INS%20OR%20Actor1Type1Code:IMG%20OR%20Actor1Type1Code:SEP%20OR%20Actor1Type1Code:REB)%20AND%20(EventRootCode:18%20OR%20EventRootCode:19%20OR%20EventRootCode:20))%20OR%20(Actor1Type1Code:CRM))%20AND%20NOT%20ActionGeo_CountryCode:US')),uiState:(),vis:(aggs:!((id:'1',params:(),schema:metric,type:count),(id:'2',params:(autoPrecision:!t,field:location,precision:3),schema:segment,type:geohash_grid)),listeners:(),params:(addTooltip:!t,heatBlur:15,heatMaxZoom:16,heatMinOpacity:0.1,heatNormalizeData:!t,heatRadius:25,isDesaturated:!t,mapType:'Scaled%20Circle%20Markers',wms:(enabled:!f,options:(attribution:'Maps%20provided%20by%20USGS',format:image%2Fpng,layers:'0',styles:'',transparent:!t,version:'1.3.0'),url:'https:%2F%2Fbasemap.nationalmap.gov%2Farcgis%2Fservices%2FUSGSTopo%2FMapServer%2FWMSServer')),title:'VEO%2FTOC%20Common%20Operational%20Picture',type:tile_map))"></iframe>-->
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer">
+								</div>
+								<!-- /panel footer -->
+							</div>
+						</div>
+
+                        <!-- Advanced GEOInt Framework (AGF) -->
+						<div class="col-sm-6 panel-large">
+							<div id="panel-chartjs-1" class="panel panel-default">
+								<div class="panel-heading">
+									<span class="elipsis"><!-- panel title -->
+										<strong>Advanced GEOInt Framework (AGF)</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
 								</div>
 								<!-- /panel content -->
 
@@ -168,35 +209,6 @@
 								<!-- panel content -->
 								<div class="panel-body text-center">
                                     <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/Most-Retweeted-Twitter-Users?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-24h,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(),schema:metric,type:count),(id:'2',params:(field:retweeted_status.user.id_str,order:desc,orderBy:'1',size:10),schema:segment,type:terms),(id:'3',params:(field:retweeted_status.user.screen_name,order:desc,orderBy:'1',size:9),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,shareYAxis:!t),title:'Most%20Retweeted%20Twitter%20Users',type:pie))"></iframe>
-								</div>
-								<!-- /panel content -->
-
-								<!-- panel footer -->
-								<div class="panel-footer">
-								</div>
-								<!-- /panel footer -->
-							</div>
-						</div>
-
-                        <!-- GEOInt Alerts -->
-						<div class="col-sm-6 panel-small">
-							<div id="panel-chartjs-6" class="panel panel-default">
-								<div class="panel-heading">
-									<span class="elipsis"><!-- panel title -->
-										<strong>GEOInt Alerts</strong>
-									</span>
-
-									<!-- right options -->
-									<ul class="options pull-right list-inline">
-										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
-										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
-										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
-									</ul>
-									<!-- /right options -->
-								</div>
-
-								<!-- panel content -->
-								<div class="panel-body text-center">
 								</div>
 								<!-- /panel content -->
 
@@ -278,6 +290,7 @@
         <script src="js/vendor/ie10-viewport-bug-workaround.js"></script>
 
         <script src="js/plugins.js"></script>
+        <script src="js/app.js"></script>
         <script src="js/commander-dashboard.js"></script>
 	</body>
 </html>
