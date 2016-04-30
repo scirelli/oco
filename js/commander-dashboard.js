@@ -19,16 +19,18 @@ $(document).ready(function(){
             myHead = $('.panel-heading', me),
             myFeet = $('.panel-footer', me),
             myBodyPadding = parseInt(myBody.css('padding-top')) + parseInt(myBody.css('padding-bottom')),
-            myFeetPadding = parseInt(myFeet.css('padding-top')) + parseInt(myFeet.css('padding-bottom')),
+            myFeetPadding = 0;//parseInt(myFeet.css('padding-top')) + parseInt(myFeet.css('padding-bottom')),
             myHeadPadding = parseInt(myHead.css('padding-top')) + parseInt(myHead.css('padding-bottom')); 
         
         myBody.height(($window.height()/2) - myBodyPadding - myFeetPadding - myHeadPadding - myMargin - contentPadding - myHead.height() - myFeet.height() - 1); 
     });
     
     $('a.panel_info').click(function(e){
+        e.preventDefault();
         var panel = $(this).closest('div.panel'),
             flipBox = $('.box-flip', panel);
         flipBox.toggleClass('flip');
+        return false;
     });
 
     $('.panel-body').each(function(){

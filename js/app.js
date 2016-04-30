@@ -50,10 +50,11 @@
 		<script>window.ajax = true;</script>
 	!*/
 	function Init(ajax) {
+        _topNav();
 		_owl_carousel();
 		_popover();
 		_lightbox();
-		_scrollTo();
+		_scrollTo(false, 0);
 		_toggle();
 		_placeholder();
 		_charts(ajax);
@@ -154,6 +155,58 @@
 		});
 	}
 
+	function _scrollTo(to, offset) {
+		if(to == false) {
+			jQuery("a.scrollTo").bind("click", function(e) {
+				e.preventDefault();
+
+				var href 	= jQuery(this).attr('href'),
+					_offset	= jQuery(this).attr('data-offset') || 0;
+
+				if(href != '#' && href != '#top') {
+					jQuery('html,body').animate({scrollTop: jQuery(href).offset().top - parseInt(_offset)}, 800, 'easeInOutExpo');
+				}
+
+				if(href == '#top') {
+					jQuery('html,body').animate({scrollTop: 0}, 800, 'easeInOutExpo');
+				}
+			});
+
+			jQuery("#toTop").bind("click", function(e) {
+				e.preventDefault();
+				jQuery('html,body').animate({scrollTop: 0}, 800, 'easeInOutExpo');
+			});
+		} else {
+			// USAGE: _scrollTo("#footer", 150);
+			jQuery('html,body').animate({scrollTop: jQuery(to).offset().top - offset}, 800, 'easeInOutExpo');
+		}
+	}
+
+/** 01. Top Nav
+ **************************************************************** **/
+	function _topNav() {
+		window.scrollTop 	= 0;
+		var _header_el 		= jQuery("#header");
+
+		jQuery(window).scroll(function() {
+			_toTop();
+		});
+
+		/* Scroll To Top */
+		function _toTop() {
+			_scrollTop = jQuery(document).scrollTop();
+			
+			if(_scrollTop > 100) {
+				if(jQuery("#toTop").is(":hidden")) {
+					jQuery("#toTop").show();
+				}
+			} else {
+				if(jQuery("#toTop").is(":visible")) {
+					jQuery("#toTop").hide();
+				}
+			}
+		}
+	}
 
 
 /** Load Script
