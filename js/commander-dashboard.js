@@ -24,6 +24,12 @@ $(document).ready(function(){
         
         myBody.height(($window.height()/2) - myBodyPadding - myFeetPadding - myHeadPadding - myMargin - contentPadding - myHead.height() - myFeet.height() - 1); 
     });
+    
+    $('a.panel_info').click(function(e){
+        var panel = $(this).closest('div.panel'),
+            flipBox = $('.box-flip', panel);
+        flipBox.toggleClass('flip');
+    });
 
     $('.panel-body').each(function(){
         var body = $(this);
