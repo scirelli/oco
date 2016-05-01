@@ -1,3 +1,6 @@
+body, html{
+    background-color:#e1e2e7;
+}
 .col-sm-6, .col-sm-3{
     padding-left:5px;
     padding-right:5px;
@@ -11,10 +14,16 @@
 
 .panel-body{
     padding:5px;
-    /*overflow:hidden;*/
 }
+
+.col-sm-3, .col-sm-6{
+    min-width:390px;
+}
+
 #content{
     padding-bottom:0px !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
 }
 
 div.panel.fullscreen .panel-body{
@@ -37,6 +46,9 @@ div.panel.fullscreen .panel-body{
     background-color:transparent;
     padding:0px;
     margin:0px;
+    min-height:100%;
+    width:100%;
+    overflow:hidden;
 }
 .panel-body-flipable .box1, .panel-body-flipable .box2{
     padding:0px;
@@ -45,6 +57,8 @@ div.panel.fullscreen .panel-body{
 }
 .panel-body-flipable .box-flip{
     margin:0px;
+    min-height:100%;
+    width:100%;
 }
 .panel-body-flipable .box-icon{
     margin:0px;
@@ -52,4 +66,31 @@ div.panel.fullscreen .panel-body{
 
 #geointAlerts .box-flip, #geointAlerts2 .box-flip{
     height:204px;
+}
+
+#footer .container{
+    margin:0px;
+    width:100%;
+}
+
+#footer img.footer-logo{
+    width: 335px;
+    height: 97.5px;
+}
+
+#footer .footer-links{
+    font-weight:bold;
+    font-size:1.2em;
+    text-align:center;
+}
+
+#footer .center .row:first-child{
+    text-align:center;
+    font-size:1.2em;
+}
+
+#footer .center .row:last-child{
+    margin: auto auto;
+    width: 150px;
+    padding-left: 15px;
 }

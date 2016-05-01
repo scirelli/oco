@@ -92,43 +92,11 @@
 			</header>
 
 			<section id="middle">
-				<div id="content" class="padding-10">
+				<div id="content" class="padding-10 container-fluid">
 					<div class="row">
                         <!-- GEOInt Alerts -->
 						<div class="col-sm-6">
 							<div id="geointAlerts" class="panel panel-default">
-								<div class="panel-heading">
-									<span class="elipsis"><!-- panel title -->
-										<strong>GEOInt Alerts</strong>
-									</span>
-
-									<!-- right options -->
-									<ul class="options pull-right list-inline">
-										<li><a href="#" class="opt panel_info" data-confirm-message="Information" data-toggle="tooltip" title="Information" data-placement="bottom"><i class="fa fa-info"></i></a></li>
-										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
-									</ul>
-									<!-- /right options -->
-								</div>
-
-                                <!-- panel content -->
-                                <div class="panel-body panel-body-flipable">
-                                    <div class="box-flip box-icon box-icon-center box-icon-round box-icon-large">
-                                        <div class="front">
-                                            <div class="box1">
-                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/3-day-Alert-Table?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(customLabel:'Daily%20Provincial%20Instability%20Score',field:provincial_instability_value),schema:metric,type:max),(id:'3',params:(customLabel:'Alert%20Date',field:date_time,order:desc,orderAgg:(id:'3-orderAgg',params:(field:date_time),schema:orderAgg,type:max),orderBy:custom,size:3),schema:bucket,type:terms),(id:'2',params:(customLabel:'Province%2FState%20Name',field:province,order:desc,orderBy:'1',size:3),schema:bucket,type:terms),(id:'4',params:(customLabel:'Country%20Name',field:country,order:desc,orderBy:'1',size:1),schema:bucket,type:terms)),listeners:(),params:(perPage:3,showMeticsAtAllLevels:!f,showPartialRows:!f),title:'3-day%20Alert%20Table',type:table))"></iframe>
-                                            </div>
-                                        </div>
-
-                                        <div class="back">
-                                            <div class="box2">
-                                                Shall we play a game?
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /panel content -->
-							</div>
-							<div id="geointAlerts2" class="panel panel-default">
 								<div class="panel-heading">
 									<span class="elipsis"><!-- panel title -->
 										<strong>GEOInt Alerts</strong>
@@ -274,12 +242,12 @@
 							</div>
 						</div>
 
-                        <!-- Provincial Instability -->
+                        <!-- Syrian Refugee Heat Map -->
 						<div class="col-sm-3 panel-small">
 							<div id="panel-chartjs-5" class="panel panel-default">
 								<div class="panel-heading">
 									<span class="elipsis"><!-- panel title -->
-										<strong>Provincial Instability</strong>
+										<strong>Syrian Refugee Heat Map</strong>
 									</span>
 
 									<!-- right options -->
@@ -295,7 +263,7 @@
                                     <div class="box-flip box-icon box-icon-center box-icon-round box-icon-large">
                                         <div class="front">
                                             <div class="box1">
-                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/3-day-Alert-Table?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-24h,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(customLabel:'Daily%20Provincial%20Instability%20Score',field:provincial_instability_value),schema:metric,type:max),(id:'3',params:(customLabel:'Alert%20Date',field:date_time,order:desc,orderAgg:(id:'3-orderAgg',params:(field:date_time),schema:orderAgg,type:max),orderBy:custom,size:3),schema:bucket,type:terms),(id:'2',params:(customLabel:'Province%2FState%20Name',field:province,order:desc,orderBy:'1',size:3),schema:bucket,type:terms),(id:'4',params:(customLabel:'Country%20Name',field:country,order:desc,orderBy:'1',size:1),schema:bucket,type:terms)),listeners:(),params:(perPage:3,showMeticsAtAllLevels:!f,showPartialRows:!f),title:'3-day%20Alert%20Table',type:table))"></iframe>
+                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/Syrian-Refugee-Crises-Heat-Map?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-30d%2Fd,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'NumArticles:%20%3E%3D3%20AND%20NOT%20(Actor1Code:%22%22%20AND%20Actor2Code:%20%22%22)%20AND%20ActionGeo_Type:%20%3E3%20AND%20(EventCode:%20075%20OR%20EventCode:%20201)%20AND%20ActionGeo_CountryCode:%20SY')),uiState:(),vis:(aggs:!((id:'1',params:(),schema:metric,type:count),(id:'2',params:(autoPrecision:!t,field:location,mapCenter:!(34.646766246519114,39.3475341796875),mapZoom:7,precision:4),schema:segment,type:geohash_grid)),listeners:(),params:(addTooltip:!t,heatBlur:'19',heatMaxZoom:'10',heatMinOpacity:'0.51',heatNormalizeData:!t,heatRadius:'22',isDesaturated:!t,mapType:Heatmap,wms:(enabled:!f,options:(attribution:'Maps%20provided%20by%20USGS',format:image%2Fpng,layers:'0',styles:'',transparent:!t,version:'1.3.0'),url:'https:%2F%2Fbasemap.nationalmap.gov%2Farcgis%2Fservices%2FUSGSTopo%2FMapServer%2FWMSServer')),title:'Syrian%20Refugee%20Crises%20Heat%20Map',type:tile_map))"></iframe>
                                             </div>
                                         </div>
 
@@ -310,12 +278,12 @@
 							</div>
 						</div>
 
-                        <!-- Most Retweet ISIL -->
+                        <!-- Geographic Distribution of Refugee Flows -->
 						<div class="col-sm-3 panel-small">
 							<div id="panel-chartjs-5" class="panel panel-default">
 								<div class="panel-heading">
 									<span class="elipsis"><!-- panel title -->
-										<strong>ISIL Retweets</strong>
+										<strong>Geographic Distribution of Refugee Flows</strong>
 									</span>
 
 									<!-- right options -->
@@ -331,7 +299,7 @@
                                     <div class="box-flip box-icon box-icon-center box-icon-round box-icon-large">
                                         <div class="front">
                                             <div class="box1">
-                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/Most-Retweeted-Twitter-Users?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-24h,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(),schema:metric,type:count),(id:'2',params:(field:retweeted_status.user.id_str,order:desc,orderBy:'1',size:10),schema:segment,type:terms),(id:'3',params:(field:retweeted_status.user.screen_name,order:desc,orderBy:'1',size:9),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,shareYAxis:!t),title:'Most%20Retweeted%20Twitter%20Users',type:pie))"></iframe>
+                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/Tone-and-News-Coverage-of-Refugees-and-Asylum-Seekers?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-30d%2Fd,mode:relative,to:now))&_a=(filters:!(),linked:!t,query:(query_string:(query:'*')),uiState:(vis:(colors:('Number%20of%20News%20Stories':%23D683CE))),vis:(aggs:!((id:'1',params:(customLabel:'Number%20of%20News%20Stories'),schema:metric,type:count),(id:'2',params:(customLabel:Country,field:country,order:desc,orderBy:'1',size:7),schema:segment,type:terms),(id:'3',params:(customLabel:'Tone%20Bubble%20(Larger%20%3D%20More%20Positive)',field:AvgTone),schema:radius,type:avg)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,drawLinesBetweenPoints:!f,interpolate:linear,radiusRatio:'17',scale:linear,setYExtents:!f,shareYAxis:!t,showCircles:!t,smoothLines:!f,times:!(),yAxis:()),title:'Tone%20and%20News%20Coverage%20of%20Refugees%20and%20Asylum%20Seekers',type:line))"></iframe>
                                             </div>
                                         </div>
 
@@ -346,12 +314,12 @@
 							</div>
 						</div>
 
-                        <!-- Uthercast -->
+                        <!-- ISIL Twitter Order of Battle -->
 						<div class="col-sm-3 panel-small">
 							<div id="panel-chartjs-6" class="panel panel-default">
 								<div class="panel-heading">
 									<span class="elipsis"><!-- panel title -->
-										<strong>Uthercast Small Sat Imagery</strong>
+										<strong>ISIL Twitter Order of Battle</strong>
 									</span>
 
 									<!-- right options -->
@@ -367,7 +335,7 @@
                                     <div class="box-flip box-icon box-icon-center box-icon-round box-icon-large">
                                         <div class="front">
                                             <div class="box1">
-                                                Shall we play a game?
+                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/ISIL-Provinces?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-30d%2Fd,mode:relative,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!(),listeners:(),params:(markdown:'%5B!!%5BISIL%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fisil.png%20%22ISIL%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Global-Quick-Look)%0A%5B!!%5BAlbaraka%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fbarakah.png%20%22Albaraka%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Barakah)%0A%5B!!%5BDamascus%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fdemashq.png%20%22Damascus%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Dimashq)%0A%5B!!%5BAlfurat%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fforat.png%20%22Alfurat%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Al-Furat)%0A%5B!!%5BAljanoob%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fjanoob.png%20%22Aljanoob%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Junoob)%0A%5B!!%5BKhorasan%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2FKhorasan.png%20%22Khorasan%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Khorasan)%0A%5B!!%5BSaladin%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fsalaheldeen.png%20%22Saladin%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Salahuddin)%0A%5B!!%5BTripoli%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Ftarablos.png%20%22Tripoli%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Tarablos)%0A%5B!!%5BAnbar%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fanbar.png%20%22Anbar%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Anbar)%0A%0A%5B!!%5BBorqah%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fborqa.png%20%22Borqah%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Borqah)%0A%5B!!%5BDiyala%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fdyala.png%20%22Diyala%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Dyala)%0A%5B!!%5BAleppo%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fhalab.png%20%22Aleppo%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Halab)%0A%5B!!%5BKirkuk%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fkarkook.png%20%22Kirkuk%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Kirkuk)%0A%5B!!%5BNinewa%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fnaynawah.png%20%22Ninewa%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Ninewa)%0A%5B!!%5BNorth%20Baghdad%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fshamalbaghdad.png%20%22North%20Baghdad%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Shamal-Baghdad)%0A%5B!!%5BBaghdad%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fbaghdad.png%20%22Baghdad%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Baghdad)%0A%5B!!%5BDijla%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fdejlah.png%20%22Dijla%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Dejlah)%0A%5B!!%5BFallujah%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Ffalwjah.png%20%22Fallujah%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Fallujah)%0A%0A%5B!!%5BHoms%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2FHoms.png%20%22Homs%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Homs)%0A%5B!!%5BAlkhair%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2FKhair.png%20%22Alkhair%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Al-Khair)%0A%5B!!%5BRaqqa%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2FReqqah.png%20%22Raqqa%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Al-Raqqah)%0A%5B!!%5BSinai%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fsyna.png%20%22Sinai%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Sinai)%0A%5B!!%5BNajd%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fnajd.png%20%22Najd%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Najd)%0A%5B!!%5BShibwa%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fshibwa.png%20%22Shibwa%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Shibwa)%0A%5B!!%5BSanaa%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fsanaa.png%20%22Sanaa%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Sanaa)%0A%5B!!%5BAlgeria%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Falgeria.png%20%22Algeria%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Algeria)%0A%5B!!%5BalJazeera%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Faljazeera.png%20%22alJazeera%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-alJazeera)%0A%0A%5B!!%5BFezzan%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Ffezzan.png%20%22Fezzan%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Fezzan)%0A%5B!!%5BHama%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fhama.png%20%22Hama%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Hama)%0A%5B!!%5BTunis%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Ftunis.png%20%22Tunis%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Tunis)%0A%5B!!%5BWest%20Africa%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fwest_africa.png%20%22West%20Africa%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-West%20Africa)%0A%5B!!%5BBaharin%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2FBaharin.png%20%22Baharin%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Baharin)%0A%5B!!%5BLajh%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2FLajh.png%20%22Lajh%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Lajh)%0A%5B!!%5BAden%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2FaAden.png%20%22Aden-Abyan%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Aden-Abyan)%0A%5B!!%5BBangladesh%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fbengladesh.png%20%22Bangladesh%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Bangladesh)%0A%5B!!%5BHadramawt%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fhadramawt.png%20%22Hadramawt%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Hadramawt)%0A%5B!!%5BKavkaz%5D(https:%2F%2Fpxp.leidos.com%2Flogos%2Fkavkaz.png%20%22Kavkaz%22)%5D(%2F%23%2Fdashboard%2FISIL-Activity-Wilayat-Kavkaz)'),title:'ISIL%20Provinces',type:markdown))"></iframe>
                                             </div>
                                         </div>
 
@@ -382,12 +350,12 @@
 							</div>
 						</div>
 
-                        <!-- Trending ISIL Content -->
+                        <!-- ISIL Tweets Per Wilaya -->
 						<div class="col-sm-3 panel-small">
 							<div id="panel-chartjs-3" class="panel panel-default">
 								<div class="panel-heading">
 									<span class="elipsis"><!-- panel title -->
-										<strong>Trending ISIL Content</strong>
+										<strong>ISIL Tweets Per Wilaya</strong>
 									</span>
 									<!-- right options -->
 									<ul class="options pull-right list-inline">
@@ -402,7 +370,7 @@
                                     <div class="box-flip box-icon box-icon-center box-icon-round box-icon-large">
                                         <div class="front">
                                             <div class="box1">
-                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/ScreenShots?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-24h,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(field:date_time),schema:metric,type:min),(id:'2',params:(field:screenshot,order:desc,orderBy:'1',size:1),schema:bucket,type:terms),(id:'3',params:(field:full_url,order:desc,orderBy:'1',size:1),schema:bucket,type:terms)),listeners:(),params:(perPage:1,showMeticsAtAllLevels:!f,showPartialRows:!f),title:ScreenShots,type:table))"></iframe>
+                                                <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/Tweets-by-Wilayat-(%EF%BF%99%EF%BE%88%EF%BF%99%EF%BE%84%EF%BF%98%EF%BE%A7%EF%BF%99%EF%BE%8A%EF%BF%98%EF%BE%A9)-Over-Time?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'hashtags:%20*%D9%88%D9%84%D8%A7%D9%8A%D8%A9*')),uiState:(spy:(mode:(fill:!f,name:!n))),vis:(aggs:!((id:'1',params:(),schema:metric,type:count),(id:'2',params:(customInterval:'2h',extended_bounds:(),field:date_time,interval:d,min_doc_count:1),schema:segment,type:date_histogram),(id:'3',params:(filters:!((input:(query:(query_string:(analyze_wildcard:!t,query:'anbar%20%20OR%20%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D8%A7%D8%B1%20OR%20%D8%A7%D9%84%D8%A7%D9%86%D8%A8%D8%A7%D8%B1%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D8%A7%D8%B1!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A7%D9%86%D8%A8%D8%A7%D8%B1!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%A7%D9%86%D8%A8%D8%A7%D8%B1!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D8%A7%D8%B1!''))),label:Anbar),(input:(query:(query_string:(analyze_wildcard:!t,query:'bahrain%20%20OR%20%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86!''))),label:Bahrain),(input:(query:(query_string:(analyze_wildcard:!t,query:'barkah%20%20OR%20%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%A8%D8%B1%D9%83%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B1%D9%83%D8%A9!''))),label:Barkah),(input:(query:(query_string:(analyze_wildcard:!t,query:'jazeera%20%20OR%20%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%AC%D8%B2%D9%8A%D8%B1%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AC%D8%B2%D9%8A%D8%B1%D8%A9!''))),label:Jazeera),(input:(query:(query_string:(analyze_wildcard:!t,query:'janoub%20%20OR%20%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%AC%D9%86%D9%88%D8%A8%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AC%D9%86%D9%88%D8%A8!''))),label:Janoub),(input:(query:(query_string:(analyze_wildcard:!t,query:'hijaz%20%20OR%20%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%AD%D8%AC%D8%A7%D8%B2%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AD%D8%AC%D8%A7%D8%B2!''))),label:Hijaz),(input:(query:(query_string:(analyze_wildcard:!t,query:'khair%20%20OR%20%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1!''))),label:Khair),(input:(query:(query_string:(analyze_wildcard:!t,query:'raqqa%20OR%20%D8%A7%D9%84%D8%B1%D9%82%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%B1%D9%82%D8%A9!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B1%D9%82%D8%A9!''))),label:Raqqa),(input:(query:(query_string:(analyze_wildcard:!t,query:'furat%20OR%20%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D8%AA%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D8%AA!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D8%AA!''))),label:Furat),(input:(query:(query_string:(analyze_wildcard:!t,query:'caucus%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D9%82%D9%88%D9%82%D8%A7%D8%B2!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D9%82%D9%88%D9%82%D8%A7%D8%B2!''))),label:Caucus),(input:(query:(query_string:(analyze_wildcard:!t,query:'baghdad%20OR%20%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!''))),label:Baghdad),(input:(query:(query_string:(analyze_wildcard:!t,query:'bangladesh%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A8%D9%86%D8%BA%D9%84%D8%A7%D8%AF%D8%B4!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A8%D9%86%D8%BA%D9%84%D8%A7%D8%AF%D8%B4!''))),label:Bangladesh),(input:(query:(query_string:(analyze_wildcard:!t,query:'tunis%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AA%D9%88%D9%86%D8%B3!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AA%D9%88%D9%86%D8%B3!''))),label:Tunis),(input:(query:(query_string:(analyze_wildcard:!t,query:'south_baghdad%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AC%D9%86%D9%88%D8%A8_%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AC%D9%86%D9%88%D8%A8%20%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!''))),label:'South%20Baghdad'),(input:(query:(query_string:(analyze_wildcard:!t,query:'hadrawmat%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA!''))),label:Hadrawmat),(input:(query:(query_string:(analyze_wildcard:!t,query:'halab%20OR%20%D8%AD%D9%84%D8%A8%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AD%D9%84%D8%A8!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AD%D9%84%D8%A8!''))),label:Halab),(input:(query:(query_string:(analyze_wildcard:!t,query:'hama%20OR%20%D8%AD%D9%85%D8%A7%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AD%D9%85%D8%A7%D8%A9!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AD%D9%85%D8%A7%D8%A9!''))),label:Hama),(input:(query:(query_string:(analyze_wildcard:!t,query:'homs%20OR%20%D8%AD%D9%85%D8%B5%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AD%D9%85%D8%B5!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AD%D9%85%D8%B5!''))),label:Homs),(input:(query:(query_string:(analyze_wildcard:!t,query:'khurasan%20OR%20%D8%AE%D8%B1%D8%B3%D8%A7%D9%86%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AE%D8%B1%D8%B3%D8%A7%D9%86!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AE%D8%B1%D8%B3%D8%A7%D9%86!''))),label:Khurasan),(input:(query:(query_string:(analyze_wildcard:!t,query:'dijla%20OR%20%D8%AF%D8%AC%D9%84%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AF%D8%AC%D9%84%D8%A9!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AF%D8%AC%D9%84%D8%A9!''))),label:Dijla),(input:(query:(query_string:(analyze_wildcard:!t,query:'damascus%20OR%20%D8%AF%D9%85%D8%B4%D9%82%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AF%D9%85%D8%B4%D9%82!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AF%D9%85%D8%B4%D9%82!''))),label:Damascus),(input:(query:(query_string:(analyze_wildcard:!t,query:'diyala%20OR%20%D8%AF%D9%8A%D8%A7%D9%84%D9%89%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%AF%D9%8A%D8%A7%D9%84%D9%89!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%AF%D9%8A%D8%A7%D9%84%D9%89!''))),label:Diyala),(input:(query:(query_string:(analyze_wildcard:!t,query:'sinai%20OR%20%D8%B3%D9%8A%D9%86%D8%A7%D8%A1%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%B3%D9%8A%D9%86%D8%A7%D8%A1!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B3%D9%8A%D9%86%D8%A7%D8%A1!''))),label:Sinai),(input:(query:(query_string:(analyze_wildcard:!t,query:'shibwa%20OR%20%D8%B4%D8%A8%D9%88%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%B4%D8%A8%D9%88%D8%A9!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B4%D8%A8%D9%88%D8%A9!''))),label:Shibwa),(input:(query:(query_string:(analyze_wildcard:!t,query:'north%20baghdad%20OR%20!'%D8%B4%D9%85%D8%A7%D9%84%20%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!'%20OR%20!'%D8%B4%D9%85%D8%A7%D9%84_%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%B4%D9%85%D8%A7%D9%84_%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B4%D9%85%D8%A7%D9%84%20%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF!''))),label:'North%20Baghdad'),(input:(query:(query_string:(analyze_wildcard:!t,query:'salahadin%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B5%D9%84%D8%A7%D8%AD%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%B5%D9%84%D8%A7%D8%AD_%D8%A7%D9%84%D8%AF%D9%8A%D9%86!'%20OR%20%20!'%D8%B5%D9%84%D8%A7%D8%AD%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86!''))),label:Salahadin),(input:(query:(query_string:(analyze_wildcard:!t,query:'sanaa%20OR%20%D8%B5%D9%86%D8%B9%D8%A7%D8%A1%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%B5%D9%86%D8%B9%D8%A7%D8%A1!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B5%D9%86%D8%B9%D8%A7%D8%A1!''))),label:Sanaa),(input:(query:(query_string:(analyze_wildcard:!t,query:'tarbulous%20OR%20%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3!''))),label:Tarbulous),(input:(query:(query_string:(analyze_wildcard:!t,query:'aden-abyan%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%B9%D8%AF%D9%86_%D8%A3%D8%A8%D9%8A%D9%86!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B9%D8%AF%D9%86%20%D8%A3%D8%A8%D9%8A%D9%86!''))),label:Aden-Abyan),(input:(query:(query_string:(analyze_wildcard:!t,query:'africa%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%BA%D8%B1%D8%A8_%D8%A3%D9%81%D8%B1%D9%8A%D9%82%D9%8A%D8%A7!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%BA%D8%B1%D8%A8_%D8%A7%D9%81%D8%B1%D9%8A%D9%82%D9%8A%D8%A7!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%BA%D8%B1%D8%A8%20%D8%A3%D9%81%D8%B1%D9%8A%D9%82%D9%8A%D8%A7!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%BA%D8%B1%D8%A8%20%D8%A7%D9%81%D8%B1%D9%8A%D9%82%D9%8A%D8%A7!''))),label:Africa),(input:(query:(query_string:(analyze_wildcard:!t,query:'fezzan%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D9%81%D8%B2%D8%A7%D9%86!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D9%81%D8%B2%D8%A7%D9%86!''))),label:Fezzan),(input:(query:(query_string:(analyze_wildcard:!t,query:'fallujah%20OR%20%D8%A7%D9%84%D9%81%D9%84%D9%88%D8%AC%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D9%81%D9%84%D9%88%D8%AC%D8%A9!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D9%81%D9%84%D9%88%D8%AC%D8%A9!''))),label:Fallujah),(input:(query:(query_string:(analyze_wildcard:!t,query:'kirkuk%20OR%20%D9%83%D8%B1%D9%83%D9%88%D9%83%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D9%83%D8%B1%D9%83%D9%88%D9%83!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D9%83%D8%B1%D9%83%D9%88%D9%83!''))),label:Kirkuk),(input:(query:(query_string:(analyze_wildcard:!t,query:'najd%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D9%86%D8%AC%D8%AF!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D9%86%D8%AC%D8%AF!''))),label:Najd),(input:(query:(query_string:(analyze_wildcard:!t,query:'ninewa%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D9%86%D9%8A%D9%86%D9%88%D9%89!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D9%86%D9%8A%D9%86%D9%88%D9%89!'%20OR%20%20%D9%86%D9%8A%D9%86%D9%88%D9%89'))),label:Ninewa),(input:(query:(query_string:(analyze_wildcard:!t,query:'badiya%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%A8%D8%A7%D8%AF%D9%8A%D8%A9!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A8%D8%A7%D8%AF%D9%8A%D8%A9!''))),label:Badiya),(input:(query:(query_string:(analyze_wildcard:!t,query:'idlib%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A5%D8%AF%D9%84%D8%A8!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A5%D8%AF%D9%84%D8%A8!''))),label:Idlib),(input:(query:(query_string:(analyze_wildcard:!t,query:'sahel%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%B3%D8%A7%D8%AD%D9%84!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A7%D8%AD%D9%84!''))),label:Sahel),(input:(query:(query_string:(analyze_wildcard:!t,query:'lahj%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D9%84%D8%AD%D8%AC!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D9%84%D8%AD%D8%AC!''))),label:Lahj),(input:(query:(query_string:(analyze_wildcard:!t,query:'borqa%20OR%20%D8%A8%D8%B1%D9%82%D8%A9%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9_%D8%A8%D8%B1%D9%82%D8%A9!'%20OR%20!'%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%A8%D8%B1%D9%82%D8%A9!''))),label:Borqa))),schema:group,type:filters)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),title:'Tweets%20by%20Wilayat%20(%D9%88%D9%84%D8%A7%D9%8A%D8%A9)%20Over%20Time',type:histogram))"></iframe>
                                             </div>
                                         </div>
 
@@ -419,9 +387,66 @@
 					</div>
 				</div>
 			</section>
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Footer Logo -->
+                            <img class="footer-logo" src="img/PXP.svg" alt="PXP"/>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4 center">
+                            <div class="row">
+                                <a href="#" class="" title="">
+                                    On-Demand Collection
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <a href="#" class="social-icon social-icon-border social-twitter pull-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                        <i class="fa fa-twitter-square"></i>
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon social-icon-border social-twitter pull-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                        <i class="fa fa-wordpress"></i>
+                                        <i class="fa fa-wordpress"></i>
+                                    </a>
+                                    <a href="#" class="social-icon social-icon-border social-twitter pull-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                        <i class="fa fa-facebook-f"></i>
+                                        <i class="fa fa-facebook-official"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <footer>
-                Footer content here
+                    <div class="row footer-links">
+                        <div class="col-md-3">
+                            <a href="#">Publicly Available Information Exploitation Platform (PXP)</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#">GLIMPS</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#">TMA-GERT</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#">Advanced Geospatial Framework (AGF)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <div>
+                        <ul class="pull-right nomargin list-inline mobile-block">
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li>•</li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                        <span>
+                            © All Rights Reserved, Leidos 
+                        </span>
+                    </div>
+                </div>
             </footer>
 		</div>
 	
