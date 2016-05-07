@@ -1,23 +1,28 @@
 body, html{
     background-color:#e1e2e7;
 }
-.col-sm-6, .col-sm-3{
+body{
+    padding-top:50px;
+}
+.col-sm-6, .col-sm-3, .col-md-6, .col-md-3 {
     padding-left:5px;
     padding-right:5px;
 }
+.col-sm-3, .col-sm-6{
+    min-width:390px;
+}
+
+
 #middle{
     margin:0;
 }
+
 .panel{
     margin-bottom:10px;
 }
 
 .panel-body{
     padding:5px;
-}
-
-.col-sm-3, .col-sm-6{
-    min-width:390px;
 }
 
 #content{
@@ -29,6 +34,12 @@ body, html{
 div.panel.fullscreen .panel-body{
     width:100%;
     height:100%;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #header div.user-avatar{
@@ -62,6 +73,11 @@ div.panel.fullscreen .panel-body{
 }
 .panel-body-flipable .box-icon{
     margin:0px;
+}
+
+.panel-body back{
+    background-color:#4b5354;
+    color:white;
 }
 
 #geointAlerts .box-flip, #geointAlerts2 .box-flip{

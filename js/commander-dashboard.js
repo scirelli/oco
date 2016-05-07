@@ -37,7 +37,7 @@ $(document).ready(function(){
         $('.panel-body').each(function(){
             var body = $(this);
             
-            $('iframe', body).each(function(){
+            $('iframe, .box2, .box1', body).each(function(){
                 var iframe = $(this);
                 iframe.height(body.height())
                       .width(body.width());
