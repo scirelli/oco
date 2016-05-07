@@ -89,17 +89,6 @@ div.panel.fullscreen .panel-body{
     width:100%;
 }
 
-#footer img.footer-logo{
-    width: 335px;
-    height: 97.5px;
-}
-
-#footer .footer-links{
-    font-weight:bold;
-    font-size:1.2em;
-    text-align:center;
-}
-
 #footer .center .row:first-child{
     text-align:center;
     font-size:1.2em;
@@ -109,4 +98,27 @@ div.panel.fullscreen .panel-body{
     margin: auto auto;
     width: 150px;
     padding-left: 15px;
+}
+
+#footer img#pxp-logo{
+    width: 335px;
+    height: 97.5px;
+}
+
+img.footer-logo{
+    display:block;
+    margin:0 auto;
+}
+
+#planet_labs_logo{
+    width:129px;
+    height:129px;
+}
+#uthercast_logo{
+    width:258px;
+    height:87px;
+}
+
+.social-links{
+    margin-top:30px;
 }
