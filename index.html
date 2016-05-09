@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en-US">
-
+<!--
+TODO:
+ * Pad and center text on back of panels.
+ * Implement time select menu. _g
+ * Implement text search box. _a
+ * Resize ADF to be two 'rows' tall.
+-->
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -112,7 +118,7 @@
                 <div class="box-flip box-icon box-icon-center box-icon-round box-icon-large">
                   <div class="front">
                     <div class="box1">
-                      <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/3-day-Alert-Table?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(customLabel:'Daily%20Provincial%20Instability%20Score',field:provincial_instability_value),schema:metric,type:max),(id:'3',params:(customLabel:'Alert%20Date',field:date_time,order:desc,orderAgg:(id:'3-orderAgg',params:(field:date_time),schema:orderAgg,type:max),orderBy:custom,size:3),schema:bucket,type:terms),(id:'2',params:(customLabel:'Province%2FState%20Name',field:province,order:desc,orderBy:'1',size:3),schema:bucket,type:terms),(id:'4',params:(customLabel:'Country%20Name',field:country,order:desc,orderBy:'1',size:1),schema:bucket,type:terms)),listeners:(),params:(perPage:3,showMeticsAtAllLevels:!f,showPartialRows:!f),title:'3-day%20Alert%20Table',type:table))"></iframe>
+                      <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/3-day-Alert-Table?embed=true&_g=(time:(from:now-7d,mode:quick,to:now))"></iframe>
                     </div>
                   </div>
 
@@ -146,7 +152,7 @@
                 <div class="box-flip box-icon box-icon-center box-icon-round box-icon-large">
                   <div class="front">
                     <div class="box1">
-                      <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/3-day-Alert-Table?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((id:'1',params:(customLabel:'Daily%20Provincial%20Instability%20Score',field:provincial_instability_value),schema:metric,type:max),(id:'3',params:(customLabel:'Alert%20Date',field:date_time,order:desc,orderAgg:(id:'3-orderAgg',params:(field:date_time),schema:orderAgg,type:max),orderBy:custom,size:3),schema:bucket,type:terms),(id:'2',params:(customLabel:'Province%2FState%20Name',field:province,order:desc,orderBy:'1',size:3),schema:bucket,type:terms),(id:'4',params:(customLabel:'Country%20Name',field:country,order:desc,orderBy:'1',size:1),schema:bucket,type:terms)),listeners:(),params:(perPage:3,showMeticsAtAllLevels:!f,showPartialRows:!f),title:'3-day%20Alert%20Table',type:table))"></iframe>
+                      <iframe src="https://pxp.leidos.com/app/kibana#/visualize/edit/3-day-Alert-Table?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')))"></iframe>
                     </div>
                   </div>
 
