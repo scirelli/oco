@@ -24,6 +24,21 @@ $(document).ready(function(){
         
         myBody.height(($window.height()/2) - myBodyPadding - myFeetPadding - myHeadPadding - myMargin - contentPadding - myHead.height() - myFeet.height() - 1); 
     });
+
+    $('.panel-tall').each(function(){
+        var me = $(this),
+            myMargin = parseInt(me.css('margin-bottom')),
+            myBody = $('.panel-body', me),
+            myHead = $('.panel-heading', me),
+            myFeet = $('.panel-footer', me),
+            myBodyPadding = parseInt(myBody.css('padding-top')) + parseInt(myBody.css('padding-bottom')),
+            myFeetPadding = 0;//parseInt(myFeet.css('padding-top')) + parseInt(myFeet.css('padding-bottom')),
+            myHeadPadding = parseInt(myHead.css('padding-top')) + parseInt(myHead.css('padding-bottom')),
+            bfh = myBodyPadding + myFeetPadding + myHeadPadding + myHead.height(),
+            cellMargin = 10; 
+        
+        myBody.height((($window.height()/2) - myBodyPadding - myFeetPadding - myHeadPadding - myMargin - contentPadding - myHead.height() - myFeet.height() - 1)*2 + bfh + cellMargin); 
+    });
     
     $('a.panel_info').click(function(e){
         e.preventDefault();
