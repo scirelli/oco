@@ -78,6 +78,10 @@ div.panel.fullscreen .panel-body{
 .panel-body .box2{
     background-color:#4b5354;
     color:white;
+    text-align:center;
+}
+.panel-body .box2 .text{
+    padding:10%;
 }
 
 #geointAlerts .box-flip, #geointAlerts2 .box-flip{
