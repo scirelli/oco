@@ -81,9 +81,12 @@ div.panel.fullscreen .panel-body{
     text-align:center;
 }
 .panel-body .box2 .text{
-    padding:10%;
+    padding:5%;
 }
 
+h4 {
+  color: white;
+}
 #geointAlerts .box-flip, #geointAlerts2 .box-flip{
     height:204px;
 }
