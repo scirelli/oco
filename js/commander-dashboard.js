@@ -60,6 +60,7 @@ $(document).ready(function(){
         });
     }
     resizeFrames();
+
     $(window).resize(function(e){
         resizeFrames();
     });
@@ -78,4 +79,41 @@ $(document).ready(function(){
             iframe.height(panelBody.height()).width(panelBody.width())
         }
     });
+
+    $('#timeMenu li a').click(function(e){
+        var anchor           = $(this),
+            selectedTime     = anchor.attr('href').replace('#', ''),
+            currentTimeFrame = $('#currentTimeFrame'),
+            kabanaFrames     = $('iframe[data-kabana]');
+
+        currentTimeFrame.text(anchor.text());
+
+        kabanaFrames.each(function(index, item){
+            var url = item.src,
+                newURL = url.replace(new RegExp('time:\\(from:now-(?:.{2}),'), 'time:(from:now-' + selectedTime + ',');
+            item.src = newURL;
+        });
+    });
+    
+    (function(){
+        var timeoutId = null,
+            inputField = $('#search');
+
+        inputField.on('keypress change blur', function(e){
+            window.clearTimeout(timeoutId);
+            timeoutId = setTimeout(function(){
+                var kabanaFrames = $('iframe[data-kabana]');
+
+                //Really bad way to do this.
+                kabanaFrames.each(function(index, item){
+                    var regex  = /query_string:\(analyze_wildcard:!t,query:'(?:.*)'\)/,
+                        query = inputField.val() || '*',
+                        replaceWith = 'query_string:(analyze_wildcard:!t,query:\'' + query + '\')',
+                        url = item.src,
+                        newURL = url.replace(regex, replaceWith);
+                    item.src = newURL;
+                });
+            }, 500);
+        });
+    })();
 });
