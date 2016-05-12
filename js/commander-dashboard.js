@@ -107,7 +107,7 @@ $(document).ready(function(){
                 //Really bad way to do this.
                 kabanaFrames.each(function(index, item){
                     var regex  = /query_string:\(analyze_wildcard:!t,query:'(?:.*)'\)/,
-                        query = inputField.val() || '*',
+                        query = window.encodeURI(inputField.val()) || '*',
                         replaceWith = 'query_string:(analyze_wildcard:!t,query:\'' + query + '\')',
                         url = item.src,
                         newURL = url.replace(regex, replaceWith);
