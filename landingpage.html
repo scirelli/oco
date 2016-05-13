@@ -25,96 +25,70 @@
 		<link href="css/header-1.css" rel="stylesheet" type="text/css"/>
         <link href="css/styleswitcher.css" rel="stylesheet" type="text/css"/>
         <link href="css/layout-dark.css" rel="stylesheet" type="text/css"/>
+
+        <link href="css/landingPage.css" rel="stylesheet" type="text/css" />
     </head>
 
 	<body class="smoothscroll enable-animation" data-background="" style="padding-top: 0px;">
 		<!-- wrapper -->
 		<div id="wrapper">
-			<div id="header" class="sticky clearfix">
-				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="container">
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
+            <div id="header">
+                <header id="header" class="fixed">
+                    <!-- Mobile Button -->
+                    <button id="mobileMenuBtn"></button>
 
-						<!-- Logo -->
-						<a class="logo pull-left" href="index.html">
-							<img src="assets/images/logo_light.png" alt="">
-						</a>
+                    <!-- Logo -->
+                    <span class="logo pull-left">
+                        <img src="img/leidos-white.png" alt="" height="35" />
+                    </span>
 
-						<div class="navbar-collapse pull-right nav-main-collapse collapse">
-							<nav class="nav-main">
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse">
+                        <nav class="nav-main">
+                            <!-- 
+                            .nav-onepage
+                            Required for onepage navigation links
 
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="#home">
-											HOME
-										</a>
-									</li>
-									<li class=""><!-- FEATURES -->
-										<a href="#features">
-											FEATURES
-										</a>
-									</li>
-									<li class=""><!-- PRICING -->
-										<a href="#pricing">
-											PRICING
-										</a>
-									</li>
-									<li class=""><!-- TESTIMONIALS -->
-										<a href="#testimonials">
-											TESTIMONIALS
-										</a>
-									</li>
-									<li><!-- PURCHASE -->
-										<a class="external" href="#purchase">
-											PURCHASE
-										</a>
-									</li>
-								</ul>
-
-							</nav>
-						</div>
-
-					</div>
-				</header>
-				<!-- /Top Nav -->
-
-			</div>
-
+                            Add .external for an external link!
+                            -->
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li class="active">
+                                    <a href="#home">HOME</a>
+                                </li>
+                                <li class="">
+                                    <a href="#features">FEATURES</a>
+                                </li>
+                                <li class="">
+                                    <a href="#pricing">PRICING</a>
+                                </li>
+                                <li class="">
+                                    <a href="#testimonials">TESTIMONIALS</a>
+                                </li>
+                                <li>
+                                    <a class="external" href="#purchase">PURCHASE</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+            </div>
 
 			<!-- HOME -->
-			<section id="home" class="height-450" style="background:url('assets/images/demo/wall2.jpg')">
+			<section id="home" class="height-450">
 				<div class="display-table">
 					<div class="display-table-cell vertical-align-middle">
-						
 						<div class="container text-center">
-							
-							<h1 class="nomargin size-50 weight-300 wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Unlimited Easy Landing Pages</h1>
-							<p class="lead font-lato size-30 wow fadeInUp animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">Building a Landing Page was never so Easy &amp; Interactive.</p>
-							
 							<div class="margin-top-30">
-								<a href="#" class="btn btn-3d btn-lg btn-teal"><i class="glyphicon glyphicon-th-large"></i>FREE TRIAL</a>
-								<span class="size-17 hidden-xs">&nbsp; OR &nbsp;</span>
-								<a href="#" class="btn btn-3d btn-lg btn-red"><i class="glyphicon glyphicon-user"></i>START FOR A SIBSCRIPTION</a>
 							</div>
-
 						</div>
-
 					</div>
 				</div>
 			</section>
 			<!-- /HOME -->
 
 
-
-
 			<!-- FEATURES -->
 			<section id="features">
 				<div class="container">
-
 					<header class="text-center margin-bottom-60">
 						<h2>Our Features</h2>
 						<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
